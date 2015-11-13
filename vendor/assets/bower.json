@@ -1,11 +1,9 @@
 {
   "name": "dsl-generated dependencies",
   "dependencies": {
-<<<<<<< HEAD
-    "angular": "latest"
-=======
     "angular": "latest",
+    "ui-router": "latest",
+    "restangular": "latest",
     "bootstrap-sass": "latest"
->>>>>>> front_lib
   }
 }

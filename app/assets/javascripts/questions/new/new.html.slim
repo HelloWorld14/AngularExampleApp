@@ -1,0 +1,14 @@
+h1 New question
+form name='newQuestion' ng-submit="vm.sendQuestion()" novalidate='true'
+  div class='form-group'
+    label for='title' Title :
+    input type='text' name='title' class='form-control' ng-model='vm.question.title' required='true' ng-minlength='6'ng-maxlength='100'
+    p class='help-block' ng-show="!newQuestion.title.$valid && newQuestion.title.$dirty" Длинна должно быть в пределах 6-100 символов
+  div class='form-group'
+    label for="body" Answer :
+    textarea class="form-control" name="body" required='true' ng-minlength='10' ng-model='vm.question.body'
+    p class='help-block' ng-show="!newQuestion.body.$valid && newQuestion.body.$dirty" Поле не может быть меньше 10 символов
+
+  button type="submit" class="btn btn-default" ng-disabled="newQuestion.$invalid" Ask
+  '
+  a href='' ui-sref='questions' class="btn btn-default" Cancel

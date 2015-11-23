@@ -3,6 +3,7 @@
 #= require angular-rails-templates
 #= require lodash/lodash
 #= require restangular/src/restangular
+#= require angular-bootstrap/ui-bootstrap-tpls
 
 
 #= require_self
@@ -19,6 +20,7 @@ angular
     'ui.router'
     'templates'
     'restangular'
+    'ui.bootstrap'
     'AngularApp.questions'
   ])
   .config(AngularAppConf)

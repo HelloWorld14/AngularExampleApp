@@ -1,5 +1,8 @@
 $border-style: 1px solid #337ab7;
 
+
+// Main
+
 .questions {
   margin-bottom: 15px;
 }
@@ -41,4 +44,14 @@ $border-style: 1px solid #337ab7;
 
 #current_question_answers {
 
+}
+
+// Question Search
+
+.question_search {
+  .order-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

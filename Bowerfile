@@ -3,4 +3,5 @@ asset "ui-router"
 asset "restangular"
 
 asset "bootstrap-sass"
+asset "angular-bootstrap"
 

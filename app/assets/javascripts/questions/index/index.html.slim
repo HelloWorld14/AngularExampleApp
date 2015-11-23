@@ -1,7 +1,24 @@
 h1 Questions
 
+.question_search
+  .row
+    .col-lg-8
+      div class="form-group"
+        input type="text" class="form-control" id="filter_title" placeholder="Поиск по заголовку" ng-model='vm.filter_title'
+    div class='col-lg-2 order-column'
+      div class="btn-group" uib-dropdown='' is-open="status.isopen"
+        button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle='' ng-disabled="disabled"
+          |
+            Сначало
+          span class="caret"
+        ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button"
+          li role="menuitem"
+            a href="#" ng-click="vm.changeOrder('-created_at')" свежие
+          li role="menuitem"
+            a href="#" ng-click="vm.changeOrder('+created_at')" старые
+
 .questions
-  div class='question' ng-repeat='question in vm.questions'
+  div class='question' ng-repeat='question in vm.questions | filter: { title:vm.filter_title } | orderBy: vm.order_questions'
     .row
       .col-lg-6
         h3
@@ -12,7 +29,9 @@ h1 Questions
             a href='' Tag 1
       .col-lg-2.actions
         a href='#' ng-click='vm.deleteQuestion(question)' class='btn btn-xs btn-danger' Удалить
-      .col-lg-2.date Today 12:30
+      .col-lg-2.date
+        |
+          {{ question.created_at | date:'dd-MM-yy HH:mm' }}
       .col-lg-2.author TrashDealerPWNZ
  
 

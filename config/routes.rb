@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :questions, only: [:index, :show, :create]
+  resources :questions, except: [:new, :edit, :update]
   
   root 'home#index'
 end

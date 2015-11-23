@@ -10,6 +10,9 @@ Question = (Restangular) ->
   question.create = (params) ->
     Restangular.all('questions').post(params)
 
+  question.destroy = (id) ->
+    Restangular.one('questions', id).remove()
+
   return question
 
 Question.$inject = ['Restangular']

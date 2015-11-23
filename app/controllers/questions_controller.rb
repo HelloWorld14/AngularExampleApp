@@ -15,6 +15,12 @@ class QuestionsController < ApplicationController
     respond_with @question
   end
 
+  def destroy
+    @question = Question.find(params[:id])
+    @question.destroy
+    respond_with @question
+  end
+
   private
 
   def question_params

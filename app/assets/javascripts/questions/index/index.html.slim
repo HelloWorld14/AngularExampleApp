@@ -3,13 +3,15 @@ h1 Questions
 .questions
   div class='question' ng-repeat='question in vm.questions'
     .row
-      .col-lg-8
+      .col-lg-6
         h3
           a href='' ui-sref='question_show({ id: question.id })' ng-bind='question.title'
         p ng-bind='question.body'
         ul.tags
           li
             a href='' Tag 1
+      .col-lg-2.actions
+        a href='#' ng-click='vm.deleteQuestion(question)' class='btn btn-xs btn-danger' Удалить
       .col-lg-2.date Today 12:30
       .col-lg-2.author TrashDealerPWNZ
  

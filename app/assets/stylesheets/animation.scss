@@ -1,0 +1,24 @@
+.view-container.ng-enter,
+.view-container.ng-move, 
+.question.ng-enter,
+.question.ng-move {
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+.question.ng-enter.ng-enter-active,
+.question.ng-move.ng-move-active,
+.view-container.ng-enter.ng-enter-active,
+.view-container.ng-move.ng-move-active {
+  opacity: 1;
+}
+
+.question.ng-leave,
+.view-container.ng-leave-active {
+  animation: 0.5s leaving_animate;
+}
+
+@keyframes leaving_animate {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}

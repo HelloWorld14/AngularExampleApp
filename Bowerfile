@@ -1,6 +1,7 @@
 asset "angular"
 asset "ui-router"
 asset "restangular"
+asset "angular-animate"
 
 asset "bootstrap-sass"
 asset "angular-bootstrap"

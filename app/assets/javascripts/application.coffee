@@ -4,6 +4,7 @@
 #= require lodash/lodash
 #= require restangular/src/restangular
 #= require angular-bootstrap/ui-bootstrap-tpls
+#= require angular-animate/angular-animate
 
 
 #= require_self
@@ -21,6 +22,7 @@ angular
     'templates'
     'restangular'
     'ui.bootstrap'
+    'ngAnimate'
     'AngularApp.questions'
   ])
   .config(AngularAppConf)
